@@ -35,7 +35,7 @@ public class PopupManager : MonoBehaviour
 
     public void OpenPopup(string key)
     {
-        if(popupStack.Count <= 0) //아무것도 안 열려있는 상태
+        if (popupStack.Count <= 0) //아무것도 안 열려있는 상태
         {
             UtilClass.SetCanvasGroup(popupParent, true);
         }
@@ -45,6 +45,24 @@ public class PopupManager : MonoBehaviour
         popupStack.Push(p);
         p.transform.SetAsLastSibling();
         p.Open();
+    }
+
+    public Popup OpenPopup(string key, bool isOpen = false)
+    {
+        if(popupStack.Count <= 0) //아무것도 안 열려있는 상태
+        {
+            UtilClass.SetCanvasGroup(popupParent, true);
+        }
+
+        Popup p = popupDictionary[key];
+
+        popupStack.Push(p);
+        p.transform.SetAsLastSibling();
+
+        if(isOpen)
+            p.Open();
+
+        return p;
     }
 
     public void ClosePopup()
