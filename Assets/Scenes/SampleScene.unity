@@ -487,6 +487,7 @@ MonoBehaviour:
   popupPrefabs:
   - {fileID: 4974961421648559318, guid: a9c78fcf53dc0274d96f0fc48241a883, type: 3}
   - {fileID: 7024627907159906201, guid: d59fffd86d068e2419879aaa13bafcae, type: 3}
+  - {fileID: 7125675257778920807, guid: ebe684215b5e4504eab547c7b0c42fb5, type: 3}
   popupParent: {fileID: 1017668203}
 --- !u!4 &531994159
 Transform:
