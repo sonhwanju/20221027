@@ -11,6 +11,15 @@ public class TabPopup : Popup
     [SerializeField]
     private Button[] tabBtns;
 
+    private void Start()
+    {
+        for (int i = 0; i < tabBtns.Length; i++)
+        {
+            int idx = i;
+            tabBtns[idx].onClick.AddListener(() => TabBtnClickEvent(tabBtns[idx].transform));
+        }
+    }
+
     private void ResetTabs()
     {
         for (int i = 0; i < tabObjCgs.Length; i++)
