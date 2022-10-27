@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 3867177338556913235}
   - component: {fileID: 3867177338556913236}
   - component: {fileID: 746204493}
+  - component: {fileID: 4532086538118846539}
   m_Layer: 5
   m_Name: PopupBase2
   m_TagString: Untagged
@@ -423,3 +424,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupKey: Base2
   exitBtn: {fileID: 3867177337612380740}
+--- !u!225 &4532086538118846539
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867177338556913239}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
