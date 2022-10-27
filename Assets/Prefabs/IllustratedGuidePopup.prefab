@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 117598905207533321}
   - component: {fileID: 3247842413720534329}
   - component: {fileID: 7024627907159906201}
+  - component: {fileID: 2975489923617138950}
   m_Layer: 5
   m_Name: IllustratedGuidePopup
   m_TagString: Untagged
@@ -592,6 +593,22 @@ MonoBehaviour:
   tabBtns:
   - {fileID: 7355901824565466097}
   - {fileID: 7355901823435917057}
+  contents:
+  - {fileID: 702287250006034193}
+  - {fileID: 1564622273960515328}
+  guidePrefab: {fileID: 1470793284277047305, guid: 49c0be3c26e058a43a3441335511ab8a, type: 3}
+--- !u!114 &2975489923617138950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799984370577511523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ced3848ab5be2c419b3c0d1eca6140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2392730173038327378
 GameObject:
   m_ObjectHideFlags: 0
