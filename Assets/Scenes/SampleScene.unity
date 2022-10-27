@@ -484,6 +484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce41af579b202d449d7134da3d7c353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupPrefabs: []
+  popupParent: {fileID: 1017668203}
 --- !u!4 &531994159
 Transform:
   m_ObjectHideFlags: 0

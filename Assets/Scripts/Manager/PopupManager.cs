@@ -6,6 +6,15 @@ public class PopupManager : MonoBehaviour
 {
     public static PopupManager Instance { get; private set; }
 
+    private Dictionary<string, Popup> popupDictionary = new Dictionary<string, Popup>();
+    private Stack<Popup> popupStack = new Stack<Popup>();
+
+    [SerializeField]
+    private Popup[] popupPrefabs;
+
+    [SerializeField]
+    private CanvasGroup popupParent;
+
     private void Awake()
     {
         if(Instance != null)
@@ -15,4 +24,14 @@ public class PopupManager : MonoBehaviour
         }
         Instance = this;
     }
+
+    private void Start()
+    {
+        for (int i = 0; i < popupPrefabs.Length; i++)
+        {
+            popupDictionary.Add(popupPrefabs[i].PopupKey, Instantiate(popupPrefabs[i], popupParent.transform));
+        }
+    }
+
+    
 }
