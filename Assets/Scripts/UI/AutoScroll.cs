@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½ ï¿½Úµï¿½
+/// ÁÁÁö ¾ÊÀº ½ºÅ©·Ñ ÄÚµå
 /// </summary>
 public class AutoScroll : MonoBehaviour
 {
@@ -67,6 +67,14 @@ public class AutoScroll : MonoBehaviour
         RectTransform target = contentChilds[1].GetComponent<RectTransform>();
         //anchoredPosition = (Vector2)scrollRect.transform.InverseTransformPoint(content.position) - (Vector2)scrollRect.transform.InverseTransformPoint(target.position);
         anchoredPosition = scrollRect.transform.InverseTransformPoint(target.position);
+    }
+
+    private void InitChild()
+    {
+        for (int i = 0; i < contentChilds.Length; i++)
+        {
+            contentChilds[i].SetSiblingIndex(i);
+        }
     }
 
     public void StartScroll()
