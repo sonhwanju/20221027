@@ -4,17 +4,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// 좋지 않은 스크롤 코드
+/// </summary>
 public class AutoScroll : MonoBehaviour
 {
     private ScrollRect scrollRect;
 
+    private Transform[] contentChilds = new Transform[0];
     private RectTransform content;
 
     private Vector2 anchoredPosition = Vector2.zero;
 
+    #region Coroutine
+
+    private Coroutine co = null;
+    private WaitForSeconds startWs = null;
+
+    private float startTime = 1f;
+    #endregion
+
     private void Awake()
     {
         scrollRect = GetComponent<ScrollRect>();
+        startWs = new WaitForSeconds(startTime);
+
         content = scrollRect.content;
     }
 
@@ -39,12 +53,52 @@ public class AutoScroll : MonoBehaviour
 
     private IEnumerator Frame()
     {
-        yield return new WaitForEndOfFrame();
+        IllustratedGuidePopup popup = FindObjectOfType<IllustratedGuidePopup>();
+        yield return new WaitUntil(() => popup.IsSettingEnd);
 
         Canvas.ForceUpdateCanvases();
 
-        RectTransform target = content.GetChild(1).GetComponent<RectTransform>();
+        contentChilds = new Transform[content.childCount];
+        for (int i = 0; i < content.childCount; i++)
+        {
+            contentChilds[i] = content.GetChild(i);
+        }
+
+        RectTransform target = contentChilds[1].GetComponent<RectTransform>();
         //anchoredPosition = (Vector2)scrollRect.transform.InverseTransformPoint(content.position) - (Vector2)scrollRect.transform.InverseTransformPoint(target.position);
         anchoredPosition = scrollRect.transform.InverseTransformPoint(target.position);
+    }
+
+    private void InitChild()
+    {
+        for (int i = 0; i < contentChilds.Length; i++)
+        {
+            contentChilds[i].SetSiblingIndex(i);
+        }
+    }
+
+    public void StartScroll()
+    {
+        //SnapTo();
+        co = StartCoroutine(Scroll());
+    }
+
+    public void StopScroll()
+    {
+        content.DOKill(true);
+
+        if(co != null)
+        {
+           StopCoroutine(co);
+        }
+
+        InitChild();
+    }
+
+    private IEnumerator Scroll()
+    {
+        yield return startWs;
+
+        SnapTo();
     }
 }
