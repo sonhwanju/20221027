@@ -40,13 +40,11 @@ public class AutoScroll : MonoBehaviour
 
     private IEnumerator Frame()
     {
-        yield return new WaitForEndOfFrame();
         IllustratedGuidePopup popup = FindObjectOfType<IllustratedGuidePopup>();
         yield return new WaitUntil(() => popup.IsSettingEnd);
 
         Canvas.ForceUpdateCanvases();
 
-        RectTransform target = content.GetChild(1).GetComponent<RectTransform>();
         contentChilds = new Transform[content.childCount];
         for (int i = 0; i < content.childCount; i++)
         {
