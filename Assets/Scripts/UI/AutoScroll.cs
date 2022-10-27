@@ -26,14 +26,15 @@ public class AutoScroll : MonoBehaviour
     private void SnapTo()
     {
         Canvas.ForceUpdateCanvases();
+        content.DOAnchorPos(anchoredPosition, 1f).OnComplete(OnCompleteMove);
+    }
 
-        content.DOAnchorPos(anchoredPosition, 1f).OnComplete(() =>
-         {
-             content.anchoredPosition = new Vector2(content.anchoredPosition.x, 0f);
-             content.GetChild(0).SetSiblingIndex(content.childCount - 1);
+    private void OnCompleteMove()
+    {
+        content.anchoredPosition = new Vector2(content.anchoredPosition.x, 0f);
+        content.GetChild(0).SetSiblingIndex(content.childCount - 1);
 
-             SnapTo();
-         });
+        SnapTo();
     }
 
     private IEnumerator Frame()
