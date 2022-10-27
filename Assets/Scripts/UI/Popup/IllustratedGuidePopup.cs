@@ -8,6 +8,9 @@ public class IllustratedGuidePopup : TabPopup
     private RectTransform[] contents;
 
     [SerializeField]
+    private AutoScroll[] autoScrolls;
+
+    [SerializeField]
     private IllustratedGuidePrefab guidePrefab;
 
     private GuideParser parser;
@@ -48,6 +51,21 @@ public class IllustratedGuidePopup : TabPopup
         }
 
         isSettingEnd = true;
+    }
+
+    private void ResetScroll()
+    {
+        for (int i = 0; i < autoScrolls.Length; i++)
+        {
+            autoScrolls[i].StopScroll();
+        }
+    }
+
+    protected override void TabBtnClickEvent(Transform t)
+    {
+        ResetScroll();
+        base.TabBtnClickEvent(t);
+        autoScrolls[t.GetSiblingIndex()].StartScroll();
     }
     }
 }
