@@ -25,10 +25,22 @@ public class IllustratedGuidePopup : TabPopup
         for (int i = 0; i < datas.Length; i++)
         {
             GuideData data = datas[i];
-            for (int j = 0; j < data.names.Length; j++)
+
+            if(data.texts.Length > 0)
             {
-                IllustratedGuidePrefab prefab = Instantiate(guidePrefab, contents[i]);
-                prefab.SetGuideText(data.names[j]);
+                for (int j = 0; j < data.names.Length; j++)
+                {
+                    IllustratedGuidePrefab prefab = Instantiate(guidePrefab, contents[i]);
+                    prefab.SetGuideText(data.names[j], data.texts[j]);
+                }
+            }
+            else
+            {
+                for (int j = 0; j < data.names.Length; j++)
+                {
+                    IllustratedGuidePrefab prefab = Instantiate(guidePrefab, contents[i]);
+                    prefab.SetGuideText(data.names[j]);
+                }
             }
         }
     }
