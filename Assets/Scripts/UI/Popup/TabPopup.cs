@@ -19,6 +19,12 @@ public class TabPopup : Popup
         }
     }
 
+    private void TabBtnClickEvent(Transform t)
+    {
+        ResetTabs();
+        UtilClass.SetCanvasGroup(tabObjCgs[t.GetSiblingIndex()], true);
+    }
+
     public override void Open()
     {
         base.Open();
