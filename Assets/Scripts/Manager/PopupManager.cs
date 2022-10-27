@@ -44,5 +44,15 @@ public class PopupManager : MonoBehaviour
         popupDictionary[key].Open();
     }
 
-    
+    public void ClosePopup()
+    {
+        if (popupStack.Count <= 0) return;
+
+        popupStack.Pop().Close();
+
+        if(popupStack.Count <= 0) //¸¶Áö¸· ÆË¾÷ÀÌ ´ÝÈù »óÅÂ
+        {
+            UtilClass.SetCanvasGroup(popupParent, false);
+        }
+    }
 }
