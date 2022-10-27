@@ -9,13 +9,22 @@ public class Popup : MonoBehaviour
     protected string popupKey;
     public string PopupKey => popupKey;
 
+    [SerializeField]
+    protected Button exitBtn;
+    public Button ExitBtn => exitBtn;
+
     protected virtual void Awake()
     {
         cvs = GetComponent<CanvasGroup>();
 
         Close();
+
     }
 
+    protected virtual void Start()
+    {
+        exitBtn.onClick.AddListener(() => PopupManager.Instance.ClosePopup());
+    }
     public virtual void Open()
     {
         cvs.alpha = 1f;
