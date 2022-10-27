@@ -25,4 +25,9 @@ public class BaseTextPopup : Popup
         return this;
     }
 
+    private void InitText()
+    {
+        headerText.text = "";
+        msgText.text = "";
+    }
 }
