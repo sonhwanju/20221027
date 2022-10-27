@@ -34,5 +34,6 @@ public class IllustratedGuidePrefab : MonoBehaviour
         guideText.text = msg;
         this.text = text;
 
+        btn.enabled = text != null;
     }
 }
