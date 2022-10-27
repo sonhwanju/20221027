@@ -23,6 +23,18 @@ public class AutoScroll : MonoBehaviour
         StartCoroutine(Frame());
     }
 
+    private void SnapTo()
+    {
+        Canvas.ForceUpdateCanvases();
+
+        content.DOAnchorPos(anchoredPosition, 1f).OnComplete(() =>
+         {
+             content.anchoredPosition = new Vector2(content.anchoredPosition.x, 0f);
+             content.GetChild(0).SetSiblingIndex(content.childCount - 1);
+
+             SnapTo();
+         });
+    }
 
     private IEnumerator Frame()
     {
