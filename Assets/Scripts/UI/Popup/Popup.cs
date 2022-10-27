@@ -18,8 +18,13 @@ public class Popup : MonoBehaviour
         cvs = GetComponent<CanvasGroup>();
 
         Close();
+
     }
 
+    protected virtual void Start()
+    {
+        exitBtn.onClick.AddListener(() => PopupManager.Instance.ClosePopup());
+    }
     public virtual void Open()
     {
         cvs.alpha = 1f;

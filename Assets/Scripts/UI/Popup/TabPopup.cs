@@ -11,8 +11,10 @@ public class TabPopup : Popup
     [SerializeField]
     private Button[] tabBtns;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         for (int i = 0; i < tabBtns.Length; i++)
         {
             int idx = i;
