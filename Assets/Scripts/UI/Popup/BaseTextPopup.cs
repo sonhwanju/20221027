@@ -30,4 +30,10 @@ public class BaseTextPopup : Popup
         headerText.text = "";
         msgText.text = "";
     }
+
+    public override void Close()
+    {
+        base.Close();
+        InitText();
+    }
 }
