@@ -12,6 +12,9 @@ public class IllustratedGuidePopup : TabPopup
 
     private GuideParser parser;
 
+    private bool isSettingEnd = false;
+    public bool IsSettingEnd => isSettingEnd;
+
     protected override void Start()
     {
         base.Start();
@@ -43,5 +46,8 @@ public class IllustratedGuidePopup : TabPopup
                 }
             }
         }
+
+        isSettingEnd = true;
+    }
     }
 }

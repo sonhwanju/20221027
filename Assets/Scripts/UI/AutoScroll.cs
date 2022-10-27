@@ -8,6 +8,7 @@ public class AutoScroll : MonoBehaviour
 {
     private ScrollRect scrollRect;
 
+    private Transform[] contentChilds = new Transform[0];
     private RectTransform content;
 
     private Vector2 anchoredPosition = Vector2.zero;
@@ -40,10 +41,19 @@ public class AutoScroll : MonoBehaviour
     private IEnumerator Frame()
     {
         yield return new WaitForEndOfFrame();
+        IllustratedGuidePopup popup = FindObjectOfType<IllustratedGuidePopup>();
+        yield return new WaitUntil(() => popup.IsSettingEnd);
 
         Canvas.ForceUpdateCanvases();
 
         RectTransform target = content.GetChild(1).GetComponent<RectTransform>();
+        contentChilds = new Transform[content.childCount];
+        for (int i = 0; i < content.childCount; i++)
+        {
+            contentChilds[i] = content.GetChild(i);
+        }
+
+        RectTransform target = contentChilds[1].GetComponent<RectTransform>();
         //anchoredPosition = (Vector2)scrollRect.transform.InverseTransformPoint(content.position) - (Vector2)scrollRect.transform.InverseTransformPoint(target.position);
         anchoredPosition = scrollRect.transform.InverseTransformPoint(target.position);
     }
