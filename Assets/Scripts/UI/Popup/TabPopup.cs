@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class TabPopup : Popup
 {
     [SerializeField]
-    private CanvasGroup[] tabObjCgs;
+    protected CanvasGroup[] tabObjCgs;
 
     [SerializeField]
-    private Button[] tabBtns;
+    protected Button[] tabBtns;
 
     protected override void Start()
     {
