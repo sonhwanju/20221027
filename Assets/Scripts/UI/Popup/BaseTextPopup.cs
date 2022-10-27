@@ -10,4 +10,19 @@ public class BaseTextPopup : Popup
     private TextMeshProUGUI headerText;
     [SerializeField]
     private TextMeshProUGUI msgText;
+
+    public BaseTextPopup SetHeaderText(string text)
+    {
+        headerText.text = text;
+
+        return this;
+    }
+
+    public BaseTextPopup SetMsgText(string text)
+    {
+        msgText.text = text;
+
+        return this;
+    }
+
 }
