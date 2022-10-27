@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// ���� ���� ��ũ�� �ڵ�
+/// </summary>
 public class AutoScroll : MonoBehaviour
 {
     private ScrollRect scrollRect;
@@ -13,9 +16,19 @@ public class AutoScroll : MonoBehaviour
 
     private Vector2 anchoredPosition = Vector2.zero;
 
+    #region Coroutine
+
+    private Coroutine co = null;
+    private WaitForSeconds startWs = null;
+
+    private float startTime = 1f;
+    #endregion
+
     private void Awake()
     {
         scrollRect = GetComponent<ScrollRect>();
+        startWs = new WaitForSeconds(startTime);
+
         content = scrollRect.content;
     }
 
@@ -54,5 +67,30 @@ public class AutoScroll : MonoBehaviour
         RectTransform target = contentChilds[1].GetComponent<RectTransform>();
         //anchoredPosition = (Vector2)scrollRect.transform.InverseTransformPoint(content.position) - (Vector2)scrollRect.transform.InverseTransformPoint(target.position);
         anchoredPosition = scrollRect.transform.InverseTransformPoint(target.position);
+    }
+
+    public void StartScroll()
+    {
+        //SnapTo();
+        co = StartCoroutine(Scroll());
+    }
+
+    public void StopScroll()
+    {
+        content.DOKill(true);
+
+        if(co != null)
+        {
+           StopCoroutine(co);
+        }
+
+        InitChild();
+    }
+
+    private IEnumerator Scroll()
+    {
+        yield return startWs;
+
+        SnapTo();
     }
 }
