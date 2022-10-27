@@ -5,6 +5,10 @@ public class Popup : MonoBehaviour
 {
     protected CanvasGroup cvs;
 
+    [SerializeField]
+    protected string popupKey;
+    public string PopupKey => popupKey;
+
     protected virtual void Awake()
     {
         cvs = GetComponent<CanvasGroup>();
