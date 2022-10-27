@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537c563fada21f34790c3d1ea84241fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupKey: Base1
+  popupKey: Illustrated
 --- !u!225 &1324201627602184681
 CanvasGroup:
   m_ObjectHideFlags: 0
