@@ -9,6 +9,10 @@ public class Popup : MonoBehaviour
     protected string popupKey;
     public string PopupKey => popupKey;
 
+    [SerializeField]
+    protected Button exitBtn;
+    public Button ExitBtn => exitBtn;
+
     protected virtual void Awake()
     {
         cvs = GetComponent<CanvasGroup>();
