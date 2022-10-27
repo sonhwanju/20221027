@@ -12,6 +12,7 @@ public class GuideParser : MonoBehaviour
 
         string[] data = textAsset.text.Split(new char[] { '\n' });
         List<string> nameList = new List<string>();
+        List<string> textList = new List<string>();
 
         for (int i = 1; i < data.Length;) //0은 데이터가 아님
         {
@@ -19,10 +20,14 @@ public class GuideParser : MonoBehaviour
             GuideData guideData = new GuideData();
 
             nameList.Clear();
-
+            textList.Clear();
             do
             {
                 nameList.Add(row[1]);
+                if(row.Length > 2)
+                {
+                    textList.Add(row[2]);
+                }
 
                 if (++i < data.Length)
                 {
@@ -32,6 +37,7 @@ public class GuideParser : MonoBehaviour
             } while (row[0].ToString().Equals(""));
 
             guideData.names = nameList.ToArray();
+            guideData.texts = textList.ToArray();
             dataList.Add(guideData);
         }
 
