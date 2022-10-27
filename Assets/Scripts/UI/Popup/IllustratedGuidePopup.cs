@@ -67,5 +67,10 @@ public class IllustratedGuidePopup : TabPopup
         base.TabBtnClickEvent(t);
         autoScrolls[t.GetSiblingIndex()].StartScroll();
     }
+
+    public override void Close()
+    {
+        base.Close();
+        ResetScroll();
     }
 }
