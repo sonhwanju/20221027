@@ -849,8 +849,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 117598905207533321}
-  - component: {fileID: 9212623839333542124}
   - component: {fileID: 3247842413720534329}
+  - component: {fileID: 7024627907159906201}
   m_Layer: 5
   m_Name: IllustratedGuidePopup
   m_TagString: Untagged
@@ -880,26 +880,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9212623839333542124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799984370577511523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a417357e1f3cd214d8588491560f1d90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popupKey: Illustrated
-  exitBtn: {fileID: 2392730173038327380}
-  tabObjCgs:
-  - {fileID: 702287249472196672}
-  - {fileID: 702287249284643492}
-  tabBtns:
-  - {fileID: 7355901824565466097}
-  - {fileID: 7355901823435917057}
 --- !u!225 &3247842413720534329
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -912,6 +892,26 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &7024627907159906201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799984370577511523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd37ea7b89f77c4aa0921df68f9e02e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupKey: Illustrated
+  exitBtn: {fileID: 2392730173038327380}
+  tabObjCgs:
+  - {fileID: 702287249472196672}
+  - {fileID: 702287249284643492}
+  tabBtns:
+  - {fileID: 7355901824565466097}
+  - {fileID: 7355901823435917057}
 --- !u!1 &2392730173038327378
 GameObject:
   m_ObjectHideFlags: 0
