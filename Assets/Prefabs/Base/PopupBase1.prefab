@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupKey: Base1
-  exitBtn: {fileID: 0}
+  exitBtn: {fileID: 383523372490924155}
 --- !u!225 &4124770749532177748
 CanvasGroup:
   m_ObjectHideFlags: 0

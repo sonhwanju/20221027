@@ -893,7 +893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupKey: Illustrated
-  exitBtn: {fileID: 0}
+  exitBtn: {fileID: 2392730173038327380}
   tabObjCgs:
   - {fileID: 702287249472196672}
   - {fileID: 702287249284643492}

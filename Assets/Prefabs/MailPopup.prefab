@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupKey: Mail
-  exitBtn: {fileID: 0}
+  exitBtn: {fileID: 5138329553760900073}
 --- !u!225 &6101743049212720446
 CanvasGroup:
   m_ObjectHideFlags: 0
