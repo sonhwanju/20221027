@@ -40,8 +40,11 @@ public class PopupManager : MonoBehaviour
             UtilClass.SetCanvasGroup(popupParent, true);
         }
 
-        popupStack.Push(popupDictionary[key]);
-        popupDictionary[key].Open();
+        Popup p = popupDictionary[key];
+
+        popupStack.Push(p);
+        p.transform.SetAsLastSibling();
+        p.Open();
     }
 
     public void ClosePopup()
