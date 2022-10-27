@@ -33,5 +33,13 @@ public class PopupManager : MonoBehaviour
         }
     }
 
-    
+    public void OpenPopup(string key)
+    {
+        if(popupStack.Count <= 0) //아무것도 안 열려있는 상태
+        {
+            UtilClass.SetCanvasGroup(popupParent, true);
+        }
+
+        popupDictionary[key].Open();
+    }
 }
