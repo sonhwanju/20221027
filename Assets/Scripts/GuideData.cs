@@ -6,4 +6,5 @@ using UnityEngine;
 public class GuideData
 {
     public string[] names;
+    public string[] texts;
 }
