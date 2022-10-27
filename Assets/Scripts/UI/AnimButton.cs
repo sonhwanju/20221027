@@ -10,4 +10,10 @@ public class AnimButton : Button
         base.OnDisable();
         animator.SetTrigger("Disabled");
     }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        animator.SetTrigger("Enabled");
+    }
 }
