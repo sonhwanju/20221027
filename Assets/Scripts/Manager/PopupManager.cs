@@ -10,9 +10,6 @@ public class PopupManager : MonoBehaviour
     private Stack<Popup> popupStack = new Stack<Popup>();
 
     [SerializeField]
-    private Popup[] popupPrefabs;
-
-    [SerializeField]
     private CanvasGroup popupParent;
 
     private void Awake()
