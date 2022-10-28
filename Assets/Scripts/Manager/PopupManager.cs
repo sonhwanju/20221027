@@ -19,7 +19,7 @@ public class PopupManager : MonoBehaviour
     {
         if(Instance != null)
         {
-            Debug.LogError("PopupManager가 여러 개 있습니다.");
+            Logger.LogError("PopupManager가 여러 개 있습니다.");
             return;
         }
         Instance = this;
