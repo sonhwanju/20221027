@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AnimButton : Button
+public class AnimButton : OnClickSoundButton
 {
     private PopupData popupData = null;
 
