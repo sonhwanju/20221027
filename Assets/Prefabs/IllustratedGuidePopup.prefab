@@ -591,8 +591,8 @@ MonoBehaviour:
   - {fileID: 702287249472196672}
   - {fileID: 6882832294514218764}
   tabBtns:
-  - {fileID: 7355901824565466097}
-  - {fileID: 7355901823435917057}
+  - {fileID: 0}
+  - {fileID: 0}
   contents:
   - {fileID: 702287250006034193}
   - {fileID: 1564622273960515328}
@@ -1319,7 +1319,7 @@ GameObject:
   - component: {fileID: 7355901823435917062}
   - component: {fileID: 7355901823435917059}
   - component: {fileID: 7355901823435917056}
-  - component: {fileID: 7355901823435917057}
+  - component: {fileID: 107449207216952464}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1386,7 +1386,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7355901823435917057
+--- !u!114 &107449207216952464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1395,7 +1395,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7355901823435917063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 944f1c2806ab89140a0b62faaecb5d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1410,7 +1410,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1441,7 +1441,7 @@ GameObject:
   - component: {fileID: 7355901824565466102}
   - component: {fileID: 7355901824565466099}
   - component: {fileID: 7355901824565466096}
-  - component: {fileID: 7355901824565466097}
+  - component: {fileID: 1411606914079581777}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7355901824565466097
+--- !u!114 &1411606914079581777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1517,7 +1517,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7355901824565466103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 944f1c2806ab89140a0b62faaecb5d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1532,7 +1532,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
