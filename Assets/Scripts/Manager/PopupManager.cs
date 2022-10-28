@@ -22,16 +22,15 @@ public class PopupManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+    public void OpenPopup(Popup prefab)
     {
-        for (int i = 0; i < popupPrefabs.Length; i++)
-        {
-            popupDictionary.Add(popupPrefabs[i].PopupKey, Instantiate(popupPrefabs[i], popupParent.transform));
-        }
-    }
+        string key = prefab.PopupKey;
 
-    public void OpenPopup(string key)
-    {
+        if(!popupDictionary.ContainsKey(key))
+        {
+            popupDictionary.Add(key, Instantiate(prefab,popupParent.transform));
+        }
+
         if (popupStack.Count <= 0) //아무것도 안 열려있는 상태
         {
             UtilClass.SetCanvasGroup(popupParent, true);
