@@ -232,6 +232,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 463539721}
     m_Modifications:
+    - target: {fileID: 463623392088015126, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
+      propertyPath: popupPrefab
+      value: 
+      objectReference: {fileID: 7214641335619900760, guid: 59256b7eaa2a0fc47906512d991c5ef9, type: 3}
     - target: {fileID: 2928795830194000501, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_text
       value: "\uC0C1\uC810"
