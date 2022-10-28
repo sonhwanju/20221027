@@ -43,9 +43,16 @@ public class PopupManager : MonoBehaviour
         p.Open();
     }
 
-    public Popup OpenPopup(string key, bool isOpen = false)
+    public Popup OpenPopup(Popup prefab, bool isOpen = false)
     {
-        if(popupStack.Count <= 0) //아무것도 안 열려있는 상태
+        string key = prefab.PopupKey;
+
+        if (!popupDictionary.ContainsKey(key))
+        {
+            popupDictionary.Add(key, Instantiate(prefab, popupParent.transform));
+        }
+
+        if (popupStack.Count <= 0) //아무것도 안 열려있는 상태
         {
             UtilClass.SetCanvasGroup(popupParent, true);
         }
