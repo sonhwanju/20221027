@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 508623420}
   - component: {fileID: 5156390902996284286}
   - component: {fileID: 2131056387294488553}
+  - component: {fileID: 2005959700}
   m_Layer: 5
   m_Name: ImageMask
   m_TagString: Untagged
@@ -59,6 +60,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508623419}
   m_CullTransparentMesh: 1
+--- !u!114 &2005959700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508623419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b8ed45ffb1cc94487f64b5eb29d0e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollObjPrefab: {fileID: 4100237839434276907, guid: 31613a0218d0a534492370b2e309c510, type: 3}
+  colors:
+  - {r: 1, g: 0.98302037, b: 0.6367924, a: 1}
+  - {r: 0.6650944, g: 1, b: 0.94881284, a: 1}
+  - {r: 0.9975241, g: 0.6650944, b: 1, a: 1}
+  - {r: 0.41176474, g: 0.7106715, b: 1, a: 1}
 --- !u!1 &980747754890262735
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,8 +171,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -287,8 +306,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -422,8 +441,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -673,8 +692,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1138,8 +1157,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
