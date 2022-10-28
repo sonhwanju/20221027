@@ -38,7 +38,6 @@ public class TabPopup : Popup
 
     public override void Open()
     {
-        ResetTabs();
         tabBtns[0].onClick?.Invoke();
         tabBtns[0].Select();
 

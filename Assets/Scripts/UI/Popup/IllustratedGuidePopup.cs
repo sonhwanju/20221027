@@ -48,5 +48,6 @@ public class IllustratedGuidePopup : TabPopup
         }
 
         isSettingEnd = true;
+        Open();
     }
 }
