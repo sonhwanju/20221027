@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 51.69995}
-  m_SizeDelta: {x: -300, y: -1296.6}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -300, y: -500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &406827867012520715
 CanvasRenderer:
@@ -319,8 +319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 10.699951}
-  m_SizeDelta: {x: -449.5, y: -399.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -140, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &702287249472196672
 CanvasGroup:
@@ -330,7 +330,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702287249472196678}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 702287250006034193}
   m_Horizontal: 0
-  m_Vertical: 0
+  m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -495,10 +495,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 50
+    m_Top: 25
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 50
+  m_Spacing: 25
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -591,14 +591,11 @@ MonoBehaviour:
   - {fileID: 702287249472196672}
   - {fileID: 6882832294514218764}
   tabBtns:
-  - {fileID: 7355901824565466097}
-  - {fileID: 7355901823435917057}
+  - {fileID: 1411606914079581777}
+  - {fileID: 107449207216952464}
   contents:
   - {fileID: 702287250006034193}
   - {fileID: 1564622273960515328}
-  autoScrolls:
-  - {fileID: 0}
-  - {fileID: 0}
   guidePrefab: {fileID: 1470793284277047305, guid: 49c0be3c26e058a43a3441335511ab8a, type: 3}
 --- !u!114 &2975489923617138950
 MonoBehaviour:
@@ -965,10 +962,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 50
+    m_Top: 25
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 50
+  m_Spacing: 25
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1026,8 +1023,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 10.699951}
-  m_SizeDelta: {x: -449.5, y: -399.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -140, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &6882832294514218764
 CanvasGroup:
@@ -1322,7 +1319,7 @@ GameObject:
   - component: {fileID: 7355901823435917062}
   - component: {fileID: 7355901823435917059}
   - component: {fileID: 7355901823435917056}
-  - component: {fileID: 7355901823435917057}
+  - component: {fileID: 107449207216952464}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1347,9 +1344,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19476545, y: 0}
-  m_AnchorMax: {x: 0.19476545, y: 0}
-  m_AnchoredPosition: {x: 0.29992676, y: 0}
-  m_SizeDelta: {x: 315.3, y: 113.4}
+  m_AnchorMax: {x: 0.30512822, y: 0}
+  m_AnchoredPosition: {x: 84.79295, y: 0}
+  m_SizeDelta: {x: 151.91705, y: 85.14}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7355901823435917059
 CanvasRenderer:
@@ -1389,7 +1386,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7355901823435917057
+--- !u!114 &107449207216952464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1398,7 +1395,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7355901823435917063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 944f1c2806ab89140a0b62faaecb5d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1413,7 +1410,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1444,7 +1441,7 @@ GameObject:
   - component: {fileID: 7355901824565466102}
   - component: {fileID: 7355901824565466099}
   - component: {fileID: 7355901824565466096}
-  - component: {fileID: 7355901824565466097}
+  - component: {fileID: 1411606914079581777}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1471,7 +1468,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 315.3, y: 113.4}
+  m_SizeDelta: {x: 236.71, y: 85.14}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7355901824565466099
 CanvasRenderer:
@@ -1511,7 +1508,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7355901824565466097
+--- !u!114 &1411606914079581777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1520,7 +1517,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7355901824565466103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 944f1c2806ab89140a0b62faaecb5d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1535,7 +1532,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1725,7 +1722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1564622273960515328}
   m_Horizontal: 0
-  m_Vertical: 0
+  m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
