@@ -68,4 +68,9 @@ public class SoundManager : MonoBehaviour
         source.clip = clip;
         source.Play();
     }
+
+    public void PlayBtnSfx()
+    {
+        PlaySfx(btnClickSfx);
+    }
 }
