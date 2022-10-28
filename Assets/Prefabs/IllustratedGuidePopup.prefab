@@ -591,8 +591,8 @@ MonoBehaviour:
   - {fileID: 702287249472196672}
   - {fileID: 6882832294514218764}
   tabBtns:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1411606914079581777}
+  - {fileID: 107449207216952464}
   contents:
   - {fileID: 702287250006034193}
   - {fileID: 1564622273960515328}

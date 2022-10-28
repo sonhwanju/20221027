@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 980747756119439664}
   - component: {fileID: 980747756119439667}
   - component: {fileID: 980747756119439666}
-  - component: {fileID: 980747756119439665}
+  - component: {fileID: 7986900255141697859}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &980747756119439665
+--- !u!114 &7986900255141697859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -821,7 +821,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 980747756119439671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 944f1c2806ab89140a0b62faaecb5d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 980747756181769779}
   - component: {fileID: 980747756181769742}
   - component: {fileID: 980747756181769741}
-  - component: {fileID: 980747756181769740}
+  - component: {fileID: 7974564511558886411}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -983,7 +983,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &980747756181769740
+--- !u!114 &7974564511558886411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -992,7 +992,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 980747756181769778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 944f1c2806ab89140a0b62faaecb5d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1210,7 +1210,7 @@ GameObject:
   - component: {fileID: 980747756413148828}
   - component: {fileID: 980747756413148831}
   - component: {fileID: 980747756413148830}
-  - component: {fileID: 980747756413148829}
+  - component: {fileID: 4258592953796175604}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &980747756413148829
+--- !u!114 &4258592953796175604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1286,7 +1286,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 980747756413148803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 944f1c2806ab89140a0b62faaecb5d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1381,7 +1381,7 @@ GameObject:
   - component: {fileID: 980747756605790563}
   - component: {fileID: 980747756605790590}
   - component: {fileID: 980747756605790589}
-  - component: {fileID: 980747756605790588}
+  - component: {fileID: 1368310088392536302}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1448,7 +1448,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &980747756605790588
+--- !u!114 &1368310088392536302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 980747756605790562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 944f1c2806ab89140a0b62faaecb5d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1789,10 +1789,10 @@ MonoBehaviour:
   - {fileID: 980747755142923924}
   - {fileID: 980747756126819204}
   tabBtns:
-  - {fileID: 980747756413148829}
-  - {fileID: 980747756605790588}
-  - {fileID: 980747756181769740}
-  - {fileID: 980747756119439665}
+  - {fileID: 4258592953796175604}
+  - {fileID: 1368310088392536302}
+  - {fileID: 7974564511558886411}
+  - {fileID: 7986900255141697859}
 --- !u!225 &1742799066365299854
 CanvasGroup:
   m_ObjectHideFlags: 0
