@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8560965297504471760}
   - component: {fileID: 1470793284277047305}
   - component: {fileID: 7188941393793578646}
+  - component: {fileID: 5606695223680491748}
   m_Layer: 5
   m_Name: IllustratedGuidePrefab
   m_TagString: Untagged
@@ -136,6 +137,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5606695223680491748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8560965297504471766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af30108f97919043855f6ebc8f041d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupPrefab: {fileID: 7125675257778920807, guid: ebe684215b5e4504eab547c7b0c42fb5, type: 3}
 --- !u!1 &8560965298310870919
 GameObject:
   m_ObjectHideFlags: 0
