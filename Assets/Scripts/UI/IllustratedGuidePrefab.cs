@@ -11,18 +11,22 @@ public class IllustratedGuidePrefab : MonoBehaviour
 
     private Button btn;
 
+    private PopupData popupData;
+
     private string text;
 
     private void Awake()
     {
-        btn = GetComponent<Button>();    
+        btn = GetComponent<Button>();
+        popupData = GetComponent<PopupData>();
     }
 
     private void Start()
     {
+
         btn.onClick.AddListener(() =>
         {
-            ((BaseTextPopup)PopupManager.Instance.OpenPopup("BaseText", false))
+            ((BaseTextPopup)PopupManager.Instance.OpenPopup(popupData.PopupPrefab, false))
             .SetHeaderText(guideText.text)
             .SetMsgText(text)
             .Open();

@@ -10,9 +10,6 @@ public class PopupManager : MonoBehaviour
     private Stack<Popup> popupStack = new Stack<Popup>();
 
     [SerializeField]
-    private Popup[] popupPrefabs;
-
-    [SerializeField]
     private CanvasGroup popupParent;
 
     private void Awake()
@@ -25,16 +22,15 @@ public class PopupManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+    public void OpenPopup(Popup prefab)
     {
-        for (int i = 0; i < popupPrefabs.Length; i++)
-        {
-            popupDictionary.Add(popupPrefabs[i].PopupKey, Instantiate(popupPrefabs[i], popupParent.transform));
-        }
-    }
+        string key = prefab.PopupKey;
 
-    public void OpenPopup(string key)
-    {
+        if(!popupDictionary.ContainsKey(key))
+        {
+            popupDictionary.Add(key, Instantiate(prefab,popupParent.transform));
+        }
+
         if (popupStack.Count <= 0) //아무것도 안 열려있는 상태
         {
             UtilClass.SetCanvasGroup(popupParent, true);
@@ -47,9 +43,16 @@ public class PopupManager : MonoBehaviour
         p.Open();
     }
 
-    public Popup OpenPopup(string key, bool isOpen = false)
+    public Popup OpenPopup(Popup prefab, bool isOpen = false)
     {
-        if(popupStack.Count <= 0) //아무것도 안 열려있는 상태
+        string key = prefab.PopupKey;
+
+        if (!popupDictionary.ContainsKey(key))
+        {
+            popupDictionary.Add(key, Instantiate(prefab, popupParent.transform));
+        }
+
+        if (popupStack.Count <= 0) //아무것도 안 열려있는 상태
         {
             UtilClass.SetCanvasGroup(popupParent, true);
         }

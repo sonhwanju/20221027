@@ -484,11 +484,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce41af579b202d449d7134da3d7c353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupPrefabs:
-  - {fileID: 4974961421648559318, guid: a9c78fcf53dc0274d96f0fc48241a883, type: 3}
-  - {fileID: 7024627907159906201, guid: d59fffd86d068e2419879aaa13bafcae, type: 3}
-  - {fileID: 7125675257778920807, guid: ebe684215b5e4504eab547c7b0c42fb5, type: 3}
-  - {fileID: 8755873437153396437, guid: a2765c01b1d43204f95c7b1857660a57, type: 3}
   popupParent: {fileID: 1017668203}
 --- !u!4 &531994159
 Transform:
@@ -712,6 +707,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 463539721}
     m_Modifications:
+    - target: {fileID: 463623392088015126, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
+      propertyPath: popupPrefab
+      value: 
+      objectReference: {fileID: 8755873437153396437, guid: a2765c01b1d43204f95c7b1857660a57, type: 3}
     - target: {fileID: 2928795830194000501, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_text
       value: "\uC5C5\uC801"
@@ -806,7 +805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7835156764207060645, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7835156764207060645, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -850,6 +849,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 463539721}
     m_Modifications:
+    - target: {fileID: 463623392088015126, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
+      propertyPath: popupPrefab
+      value: 
+      objectReference: {fileID: 4974961421648559318, guid: a9c78fcf53dc0274d96f0fc48241a883, type: 3}
     - target: {fileID: 2928795830194000501, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_text
       value: "\uC6B0\uD3B8"
@@ -944,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7835156764207060645, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7835156764207060645, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1193,6 +1196,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 463539721}
     m_Modifications:
+    - target: {fileID: 463623392088015126, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
+      propertyPath: popupPrefab
+      value: 
+      objectReference: {fileID: 7024627907159906201, guid: d59fffd86d068e2419879aaa13bafcae, type: 3}
     - target: {fileID: 2928795830194000501, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_text
       value: "\uB3C4\uAC10"
@@ -1287,7 +1294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7835156764207060645, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7835156764207060645, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
