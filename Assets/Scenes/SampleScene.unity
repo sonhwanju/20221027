@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxSourceList: []
-  btnClickSfx: {fileID: 0}
+  btnClickSfx: {fileID: 8300000, guid: a27fb875671f9c5409d238e83caca165, type: 3}
 --- !u!1001 &655181735
 PrefabInstance:
   m_ObjectHideFlags: 0
