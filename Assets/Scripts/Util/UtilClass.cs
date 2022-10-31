@@ -13,14 +13,31 @@ public static class UtilClass
         cg.blocksRaycasts = on;
     }
 
+    public static IEnumerator FadeCanvasGroup(CanvasGroup cg, float fadeTime, bool fadeIn)
+    {
+        float timer = 0f;
+
+        while (timer < fadeTime)
+        {
+            yield return null;
+            timer += Time.unscaledDeltaTime;
+            cg.alpha = Mathf.Clamp01(timer / fadeTime);
+        }
+
+        if(!fadeIn)
+        {
+            cg.gameObject.SetActive(false);
+        }
+    }
+
     public static IEnumerator Fade<T>(T image, float fadeTime, bool fadeIn) where T : Graphic
     {
-        float elapsedTime = 0.0f;
+        float elapsedTime = 0f;
         Color c = image.color;
         while (elapsedTime < fadeTime)
         {
             yield return null;
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.unscaledDeltaTime;
             if (fadeIn)
             {
                 c.a = Mathf.Clamp01(elapsedTime / fadeTime);
