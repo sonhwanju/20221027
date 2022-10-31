@@ -46,7 +46,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508623419}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
@@ -72,12 +72,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b8ed45ffb1cc94487f64b5eb29d0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollObjPrefab: {fileID: 4100237839434276907, guid: 31613a0218d0a534492370b2e309c510, type: 3}
-  colors:
-  - {r: 1, g: 0.98302037, b: 0.6367924, a: 1}
-  - {r: 0.6650944, g: 1, b: 0.94881284, a: 1}
-  - {r: 0.9975241, g: 0.6650944, b: 1, a: 1}
-  - {r: 0.41176474, g: 0.7106715, b: 1, a: 1}
+  prefab: {fileID: 4100237839434276907, guid: 31613a0218d0a534492370b2e309c510, type: 3}
+  objs: []
 --- !u!1 &980747754890262735
 GameObject:
   m_ObjectHideFlags: 0
