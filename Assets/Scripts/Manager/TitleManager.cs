@@ -46,8 +46,7 @@ public class TitleManager : MonoBehaviour
         bool fadeIn = false;
         while (true)
         {
-            Coroutine c = StartCoroutine(UtilClass.Fade(startText, fadeTime, fadeIn));
-            yield return new WaitUntil(() => fadeIn ? (startText.color.a >= 1f) : (startText.color.a <= 0f));
+            yield return StartCoroutine(UtilClass.Fade(startText, fadeTime, fadeIn));
             fadeIn = !fadeIn;
         }
     }
