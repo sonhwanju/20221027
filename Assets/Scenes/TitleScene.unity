@@ -639,6 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startText: {fileID: 31657103}
+  fadeTime: 0.8
 --- !u!1 &1909329444
 GameObject:
   m_ObjectHideFlags: 0
