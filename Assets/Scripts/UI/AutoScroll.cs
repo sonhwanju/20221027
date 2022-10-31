@@ -13,6 +13,8 @@ public class AutoScroll : MonoBehaviour
     [SerializeField]
     private RectTransform[] objs;
 
+    private Color[] objColor = null;
+
     private int initCount = 5;
     private int lastIdx = 0;
 
@@ -33,6 +35,10 @@ public class AutoScroll : MonoBehaviour
         autoScrollWs = new WaitForSeconds(autoScrollTime);
         waitForEndOfFrame = new WaitForEndOfFrame();
 
+        objColor = new Color[]
+        {
+            Color.black,Color.red,Color.blue,Color.yellow, Color.green
+        };
     }
 
     private void Start()
@@ -44,6 +50,7 @@ public class AutoScroll : MonoBehaviour
         for (int i = 0; i < initCount; i++)
         {
             objs[i] = Instantiate(prefab, transform);
+            objs[i].GetComponent<Image>().color = objColor[i];
             SetAnchoredPos(objs[i], i * width);
         }
     }
