@@ -11,9 +11,34 @@ public class TitleManager : MonoBehaviour
     [SerializeField]
     private float fadeTime = 0.8f;
 
+    private bool isOnce = false;
+
     private void Start()
     {
         StartCoroutine(FadeCoroutine());
+    }
+
+    private void Update()
+    {
+        if (isOnce) return;
+
+#if UNITY_EDITOR
+        if(Input.GetMouseButtonDown(0))
+        {
+            //LoadScene
+            LoadSceneManager.Instance.LoadScene("MainScene");
+            isOnce = true;
+        }
+
+#else
+        if(Input.touchCount > 0)
+        {
+            //LoadScene
+            LoadSceneManager.Instance.LoadScene("MainScene");
+            isOnce = true;
+        }
+
+#endif
     }
 
     private IEnumerator FadeCoroutine()
