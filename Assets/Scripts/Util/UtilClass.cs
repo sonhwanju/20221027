@@ -21,7 +21,15 @@ public static class UtilClass
         {
             yield return null;
             timer += Time.unscaledDeltaTime;
-            cg.alpha = Mathf.Clamp01(timer / fadeTime);
+
+            if(fadeIn)
+            {
+                cg.alpha = Mathf.Clamp01(timer / fadeTime); ;
+            }
+            else
+            {
+                cg.alpha = 1 - Mathf.Clamp01(timer / fadeTime);
+            }
         }
 
         if(!fadeIn)
