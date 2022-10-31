@@ -33,4 +33,11 @@ public static class UtilClass
             image.color = c;
         }
     }
+
+    public static T CreateObj<T>(string path) where T : Object
+    {
+        T obj = Resources.Load<T>(path);
+
+        return GameObject.Instantiate(obj);
+    }
 }
