@@ -95,6 +95,25 @@ public class AutoScroll : MonoBehaviour
         }
     }
 
+    private IEnumerator SmoothMoveLeft(RectTransform obj, float lerpTime = 1f)
+    {
+        Vector2 targetMin = obj.offsetMin + new Vector2(-width, obj.offsetMin.y);
+        Vector2 targetMax = obj.offsetMax + new Vector2(-width, obj.offsetMax.y);
+
+        float timer = 0f;
+
+        while (timer < lerpTime)
+        {
+            yield return null;
+            timer += Time.unscaledDeltaTime;
+
+            obj.offsetMin = Vector2.Lerp(obj.offsetMin, targetMin, timer / lerpTime);
+            obj.offsetMax = Vector2.Lerp(obj.offsetMax, targetMax, timer / lerpTime);
+        }
+
+        obj.offsetMin = targetMin;
+        obj.offsetMax = targetMax;
+    }
 
     private IEnumerator SwipeObjs()
     {
@@ -104,7 +123,7 @@ public class AutoScroll : MonoBehaviour
         {
             for (int i = 0; i < objs.Length; i++)
             {
-                MoveLeft(objs[i]);
+                StartCoroutine(SmoothMoveLeft(objs[i],1f));
             }
 
             yield return autoScrollWs;
