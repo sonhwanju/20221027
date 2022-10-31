@@ -89,8 +89,22 @@ public class AutoScroll : MonoBehaviour
         objs[lastIdx] = obj;
     }
 
+    private void InitObj()
+    {
+        if (objs.Length <= 0f) return;
+
+        ShiftObjs();
+
+        for (int i = 0; i < objs.Length; i++)
+        {
+            SetAnchoredPos(objs[i], i * width);
+        }
+    }
+
     public void StartScroll()
     {
+        InitObj();
+
         autoScrollCoroutine = StartCoroutine(SwipeObjs());
     }
 
