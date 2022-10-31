@@ -71,7 +71,6 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBtnSfx()
     {
-        Logger.Log("Play Button Sound");
         PlaySfx(btnClickSfx);
     }
 }
