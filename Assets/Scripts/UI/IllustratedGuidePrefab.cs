@@ -33,11 +33,11 @@ public class IllustratedGuidePrefab : MonoBehaviour
         });
     }
 
-    public void SetGuideText(string msg, string text = null)
+    public void SetGuideText(string msg, string text = "")
     {
         guideText.text = msg;
         this.text = text;
 
-        btn.enabled = text != null;
+        btn.enabled = !text.Equals("");
     }
 }
