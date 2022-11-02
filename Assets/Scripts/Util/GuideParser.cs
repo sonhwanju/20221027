@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class GuideParser : MonoBehaviour
 {
+    private char[] splitChar;
+
+    private void Awake()
+    {
+        splitChar = new char[] { ',' };
+    }
+
     public GuideData[] Parse(string fileName)
     {
         List<GuideData> dataList = new List<GuideData>();
@@ -11,12 +18,13 @@ public class GuideParser : MonoBehaviour
         TextAsset textAsset = Resources.Load<TextAsset>(fileName);
 
         string[] data = textAsset.text.Split(new char[] { '\n' });
+        string[] row = new string[] { };
         List<string> nameList = new List<string>();
         List<string> textList = new List<string>();
 
         for (int i = 1; i < data.Length;) //0은 데이터가 아님
         {
-            string[] row = data[i].Split(new char[] { ',' });
+            row = data[i].Split(splitChar);
             GuideData guideData = new GuideData();
 
             nameList.Clear();
@@ -31,7 +39,7 @@ public class GuideParser : MonoBehaviour
 
                 if (++i < data.Length)
                 {
-                    row = data[i].Split(new char[] { ',' });
+                    row = data[i].Split(splitChar);
                 }
                 else break;
             } while (row[0].ToString().Equals(""));
