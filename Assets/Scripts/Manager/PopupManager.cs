@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Profiling;
 
 public class PopupManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PopupManager : MonoBehaviour
 
     public void OpenPopup(Popup prefab)
     {
+        Profiler.BeginSample("OpenPopup");
         string key = prefab.PopupKey;
 
         if(!popupDictionary.ContainsKey(key))
@@ -41,6 +43,7 @@ public class PopupManager : MonoBehaviour
         popupStack.Push(p);
         p.transform.SetAsLastSibling();
         p.Open();
+        Profiler.EndSample();
     }
 
     public Popup OpenPopup(Popup prefab, bool isOpen = false)
