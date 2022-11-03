@@ -69,9 +69,9 @@ public class LoadSceneManager : MonoBehaviour
         }
     }
 
-    private IEnumerator Load(string sceneName)
+    private IEnumerator Load(string sceneName, bool isAdditive = false)
     {
-        AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
+        AsyncOperation op = SceneManager.LoadSceneAsync(sceneName, isAdditive ? LoadSceneMode.Additive : LoadSceneMode.Single);
         float timer = 0f;
         int percent = 0;
 
