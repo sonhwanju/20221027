@@ -109,4 +109,16 @@ public class LoadSceneManager : MonoBehaviour
             progressText.text = $"{percent}%";
         }
     }
+
+    private IEnumerator UnLoad(string sceneName)
+    {
+        AsyncOperation op = SceneManager.UnloadSceneAsync(sceneName);
+
+        op.allowSceneActivation = true;
+
+        while (!op.isDone)
+        {
+            yield return null;
+        }
+    }
 }
