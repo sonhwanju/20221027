@@ -6,6 +6,11 @@ public class GuideParser : MonoBehaviour
 {
     private char[] splitChar;
 
+    List<GuideData> dataList = new List<GuideData>();
+
+    List<string> nameList = new List<string>();
+    List<string> textList = new List<string>();
+
     private void Awake()
     {
         splitChar = new char[] { ',' };
@@ -13,15 +18,12 @@ public class GuideParser : MonoBehaviour
 
     public GuideData[] Parse(string fileName)
     {
-        List<GuideData> dataList = new List<GuideData>();
-
         TextAsset textAsset = Resources.Load<TextAsset>(fileName);
 
         string[] data = textAsset.text.Split(new char[] { '\n' });
         string[] row = new string[] { };
-        List<string> nameList = new List<string>();
-        List<string> textList = new List<string>();
 
+        dataList.Clear();
         for (int i = 1; i < data.Length;) //0은 데이터가 아님
         {
             row = data[i].Split(splitChar);
