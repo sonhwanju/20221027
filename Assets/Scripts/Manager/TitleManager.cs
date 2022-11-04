@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TitleManager : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class TitleManager : MonoBehaviour
     private float fadeTime = 0.8f;
 
     private bool isOnce = false;
+
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
 
     private void Start()
     {
@@ -26,7 +32,9 @@ public class TitleManager : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             //LoadScene
-            LoadSceneManager.Instance.LoadScene("MainScene");
+            //LoadSceneManager.Instance.LoadScene("MainScene");
+
+            StartCoroutine(LoadSceneManager.Instance.LoadSceneCoroutine("MainScene"));
             isOnce = true;
         }
 
@@ -49,5 +57,9 @@ public class TitleManager : MonoBehaviour
             yield return StartCoroutine(UtilClass.Fade(startText, fadeTime, fadeIn));
             fadeIn = !fadeIn;
         }
+    }
+
+    private void OnDestroy()
+    {
     }
 }

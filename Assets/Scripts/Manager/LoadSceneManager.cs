@@ -52,12 +52,29 @@ public class LoadSceneManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void LoadScene(string sceneName)
+    public IEnumerator LoadSceneCoroutine(string sceneName, bool isAdditive =false)
     {
         gameObject.SetActive(true);
-        SceneManager.sceneLoaded += EndLoadScene;
+
+        if (!sceneName.Equals("BetweenScene"))
+        {
+            yield return StartCoroutine(Load("BetweenScene"));
+        }
+
+        LoadScene(sceneName, isAdditive);
+        yield return null;
+    }
+
+    public void LoadScene(string sceneName, bool isAdditive = false)
+    {
+        gameObject.SetActive(true);
+
+        
+
+        if(!isAdditive)
+            SceneManager.sceneLoaded += EndLoadScene;
         loadSceneName = sceneName;
-        StartCoroutine(Load(sceneName));
+        StartCoroutine(Load(sceneName, isAdditive));
     }
 
     private void EndLoadScene(Scene scene, LoadSceneMode loadSceneMode)
