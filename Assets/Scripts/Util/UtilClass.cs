@@ -9,7 +9,6 @@ public static class UtilClass
     public static void SetCanvasGroup(CanvasGroup cg, bool on)
     {
         cg.alpha = on ? 1f : 0f;
-        cg.interactable = on;
         cg.blocksRaycasts = on;
     }
 
@@ -34,7 +33,7 @@ public static class UtilClass
 
         if(!fadeIn)
         {
-            cg.gameObject.SetActive(false);
+            cg.blocksRaycasts = false;
         }
     }
 
