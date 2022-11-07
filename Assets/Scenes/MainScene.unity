@@ -236,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7835156764207060645, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Load
+      value: UnLoad
       objectReference: {fileID: 0}
     - target: {fileID: 7835156764207060645, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -761,7 +761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7835156764207060645, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UnLoad
+      value: Load
       objectReference: {fileID: 0}
     - target: {fileID: 7835156764207060645, guid: c3569724a7fb12645921839ba2b302c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1007,8 +1007,8 @@ CanvasGroup:
   m_GameObject: {fileID: 1409057254}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!222 &1409057257
 CanvasRenderer:
