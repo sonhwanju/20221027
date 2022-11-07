@@ -31,6 +31,7 @@ public class LoadSceneManager : MonoBehaviour
         set => instance = value;
     }
 
+    [Header("LoadScene")]
     [SerializeField]
     private CanvasGroup loadCg;
     [SerializeField]
@@ -39,6 +40,12 @@ public class LoadSceneManager : MonoBehaviour
     private TextMeshProUGUI progressText;
 
     private string loadSceneName = string.Empty;
+
+    [Header("Loading")]
+    [SerializeField]
+    private CanvasGroup loadingCg;
+    [SerializeField]
+    private TextMeshProUGUI loadingProgressText;
 
     private void Awake()
     {
@@ -50,11 +57,14 @@ public class LoadSceneManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        UtilClass.SetCanvasGroup(loadingCg, false);
+        UtilClass.SetCanvasGroup(loadCg, false);
     }
 
     public IEnumerator LoadSceneCoroutine(string sceneName, bool isAdditive =false)
     {
-        gameObject.SetActive(true);
+        UtilClass.SetCanvasGroup(loadCg, true);
 
         if (!sceneName.Equals("BetweenScene"))
         {
@@ -67,9 +77,7 @@ public class LoadSceneManager : MonoBehaviour
 
     public void LoadScene(string sceneName, bool isAdditive = false)
     {
-        gameObject.SetActive(true);
-
-        
+        UtilClass.SetCanvasGroup(loadCg, true);
 
         if(!isAdditive)
             SceneManager.sceneLoaded += EndLoadScene;
@@ -93,8 +101,6 @@ public class LoadSceneManager : MonoBehaviour
         int percent = 0;
 
         progress.fillAmount = 0f;
-        UtilClass.SetCanvasGroup(loadCg, true);
-
         op.allowSceneActivation = false;
 
         while (!op.isDone)
@@ -138,4 +144,23 @@ public class LoadSceneManager : MonoBehaviour
             yield return null;
         }
     }
+
+    #region loading
+
+    public void StartLoading()
+    {
+        UtilClass.SetCanvasGroup(loadingCg, true);
+    }
+
+    public void EndLoading()
+    {
+        UtilClass.SetCanvasGroup(loadingCg, false);
+    }
+
+    public void SetLoadingText(float progress)
+    {
+        loadingProgressText.text = $"{Mathf.RoundToInt(progress)}%";
+    }
+
+    #endregion
 }
