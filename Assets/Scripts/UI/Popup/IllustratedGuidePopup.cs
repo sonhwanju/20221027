@@ -19,17 +19,25 @@ public class IllustratedGuidePopup : TabPopup
     {
         base.Start();
 
+        StartCoroutine(OpenPopup());
+    }
+
+    private IEnumerator OpenPopup()
+    {
         parser = GetComponent<GuideParser>();
 
-        if (parser == null) return;
+        if (parser == null) yield break;
 
-        GuideData[] datas = parser.Parse("GuideFile");
+        yield return StartCoroutine(parser.Parse("GuideFile",SetPopupData));
+    }
 
+    private void SetPopupData(GuideData[] datas)
+    {
         for (int i = 0; i < datas.Length; i++)
         {
             GuideData data = datas[i];
 
-            if(data.texts.Length > 0)
+            if (data.texts.Length > 0)
             {
                 for (int j = 0; j < data.names.Length; j++)
                 {
