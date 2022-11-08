@@ -24,8 +24,17 @@ public class GuideParser : MonoBehaviour
     public IEnumerator Parse(string fileName,Action<GuideData[]> callback)
     {
         handle = Addressables.LoadAssetAsync<TextAsset>(fileName);
+        
+        //yield return handle;
+        LoadSceneManager.Instance.StartLoading();
 
-        yield return handle;
+        while (!handle.IsDone)
+        {
+            LoadSceneManager.Instance.SetLoadingText(handle.PercentComplete * 100);
+            yield return null;
+        }
+
+        LoadSceneManager.Instance.EndLoading();
 
         TextAsset textAsset = handle.Result;
 
