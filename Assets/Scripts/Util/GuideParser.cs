@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class GuideParser : MonoBehaviour
 {
@@ -11,14 +14,29 @@ public class GuideParser : MonoBehaviour
     List<string> nameList = new List<string>();
     List<string> textList = new List<string>();
 
+    private AsyncOperationHandle<TextAsset> handle;
+
     private void Awake()
     {
         splitChar = new char[] { ',' };
     }
 
-    public GuideData[] Parse(string fileName)
+    public IEnumerator Parse(string fileName,Action<GuideData[]> callback)
     {
-        TextAsset textAsset = Resources.Load<TextAsset>(fileName);
+        handle = Addressables.LoadAssetAsync<TextAsset>(fileName);
+        
+        //yield return handle;
+        LoadSceneManager.Instance.StartLoading();
+
+        while (!handle.IsDone)
+        {
+            LoadSceneManager.Instance.SetLoadingText(handle.PercentComplete * 100);
+            yield return null;
+        }
+
+        LoadSceneManager.Instance.EndLoading();
+
+        TextAsset textAsset = handle.Result;
 
         string[] data = textAsset.text.Split(new char[] { '\n' });
         string[] row = new string[] { };
@@ -34,7 +52,7 @@ public class GuideParser : MonoBehaviour
             do
             {
                 nameList.Add(row[1]);
-                if(row.Length > 2)
+                if (row.Length > 2)
                 {
                     textList.Add(row[2]);
                 }
@@ -50,7 +68,7 @@ public class GuideParser : MonoBehaviour
             guideData.texts = textList.ToArray();
             dataList.Add(guideData);
         }
-
-        return dataList.ToArray();
+        Addressables.Release(handle);
+        callback?.Invoke(dataList.ToArray());
     }
 }
