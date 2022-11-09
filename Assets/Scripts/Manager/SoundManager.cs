@@ -34,6 +34,10 @@ public class SoundManager : MonoBehaviour
     private EventInstance bgmInstance;
 
     [SerializeField]
+    private string bgmVca = "vca:/BGM";
+    [SerializeField]
+    private string sfxVca = "vca:/Sfx";
+    [SerializeField]
     private string bgmEvent = "event:/BGM";
 
     private void Awake()
@@ -50,6 +54,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
+        InitVcaSound();
         CreateBgmInstance();
         StartSound(bgmInstance);
     }
@@ -80,5 +85,16 @@ public class SoundManager : MonoBehaviour
     private void CreateBgmInstance()
     {
         bgmInstance = RuntimeManager.CreateInstance(bgmEvent);
+    }
+
+    private void InitVcaSound()
+    {
+        SaveData data = DataManager.Instance.SaveData;
+
+        if(data != null)
+        {
+            RuntimeManager.GetVCA(bgmVca).setVolume(data.bgmVolume);
+            RuntimeManager.GetVCA(sfxVca).setVolume(data.sfxVolume);
+        }
     }
 }

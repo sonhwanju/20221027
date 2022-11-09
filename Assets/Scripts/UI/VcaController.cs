@@ -12,24 +12,30 @@ public class VcaController : MonoBehaviour
     [SerializeField]
     private string vcaName;
 
-    [SerializeField]
-    private float vcaVolume;
+    private float volume = 0f;
 
     private void Awake()
     {
         slider = GetComponent<Slider>();
         slider.onValueChanged.AddListener(SetVolume);
-    }
 
-    private void Start()
-    {
         vcaController = FMODUnity.RuntimeManager.GetVCA($"vca:/{vcaName}");
-        vcaController.getVolume(out vcaVolume);
     }
 
     public void SetVolume(float volume)
     {
         vcaController.setVolume(volume);
-        vcaVolume = volume;
     }
+
+    public float GetVolume()
+    {
+        vcaController.getVolume(out volume);
+        return volume;
+    }
+
+    public void SetSlider(float volume)
+    {
+        slider.value = volume;
+    }
+
 }
