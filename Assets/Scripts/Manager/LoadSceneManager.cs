@@ -90,6 +90,7 @@ public class LoadSceneManager : MonoBehaviour
         if(scene.name.Equals(loadSceneName))
         {
             StartCoroutine(UtilClass.FadeCanvasGroup(loadCg, 0.8f, false));
+            SoundManager.Instance.SetBgm(scene.buildIndex);
             SceneManager.sceneLoaded -= EndLoadScene;
         }
     }

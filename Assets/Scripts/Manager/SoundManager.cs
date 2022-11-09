@@ -1,76 +1,84 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
+using FMOD;
+using FMOD.Studio;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager Instance { get; private set; }
+    private static SoundManager instance;
+    public static SoundManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                var obj = FindObjectOfType<SoundManager>();
+
+                if (obj == null)
+                {
+                    instance = UtilClass.CreateObj<SoundManager>("SoundManager");
+                }
+                else
+                {
+                    instance = obj;
+                }
+            }
+            return instance;
+        }
+
+        set => instance = value;
+    }
+
+    private EventInstance bgmInstance;
 
     [SerializeField]
-    private List<AudioSource> sfxSourceList = new List<AudioSource>();
-
-    [SerializeField]
-    private AudioClip btnClickSfx;
+    private string bgmEvent = "event:/BGM";
 
     private void Awake()
     {
-        if(Instance != null)
+        if (Instance != this)
         {
-            Logger.LogError("SoundManager Instance not null");
+            Destroy(gameObject);
             return;
         }
+
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
-        CreateAudioSource(5);
+        CreateBgmInstance();
+        StartSound(bgmInstance);
     }
 
-    private void CreateAudioSource(int count)
+    public static void PlayOneShot(string path)
     {
-        for (int i = 0; i < count; i++)
-        {
-            CreateAudioSource();
-        }
+        RuntimeManager.PlayOneShot(path);
     }
 
-    private AudioSource CreateAudioSource()
+    public static void StopSound(EventInstance instance, FMOD.Studio.STOP_MODE mode)
     {
-        GameObject obj = new GameObject("AudioSource");
-        obj.transform.SetParent(transform);
-
-        AudioSource source = obj.AddComponent<AudioSource>();
-        source.playOnAwake = false;
-
-        sfxSourceList.Add(source);
-
-        return source;
+        instance.stop(mode);
+        instance.release();
     }
 
-    private AudioSource GetEmptySource()
+    public static void StartSound(EventInstance instance)
     {
-        for (int i = 0; i < sfxSourceList.Count; i++)
-        {
-            if(!sfxSourceList[i].isPlaying)
-            {
-                return sfxSourceList[i];
-            }
-        }
-
-        return CreateAudioSource();
+        instance.start();
     }
 
-    public void PlaySfx(AudioClip clip)
+    public void SetBgm(float value)
     {
-        AudioSource source = GetEmptySource();
-
-        source.clip = clip;
-        source.Play();
+        StopSound(bgmInstance,FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        bgmInstance.setParameterByName("Change", value);
+        StartSound(bgmInstance);
     }
 
-    public void PlayBtnSfx()
+    private void CreateBgmInstance()
     {
-        PlaySfx(btnClickSfx);
+        bgmInstance = RuntimeManager.CreateInstance(bgmEvent);
     }
 }

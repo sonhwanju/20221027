@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/20221027/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638035879315857907
+  lastModified: 638036027284209947
   FileSizes:
   - Name: Desktop
-    Value: 24032
+    Value: 1706
   Exists: 1
 --- !u!114 &-5139104759095031684
 MonoBehaviour:
@@ -35,10 +35,30 @@ MonoBehaviour:
   Path: ../../FMOD Studio/20221027/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638035879315873812
+  lastModified: 638036027284219924
   FileSizes:
   - Name: Desktop
-    Value: 760
+    Value: 1130
+  Exists: 1
+--- !u!114 &-710422742077217258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD Studio/20221027/Build/Desktop/BGM.bank
+  Name: BGM
+  StudioPath: bank:/BGM
+  lastModified: 638036027284661371
+  FileSizes:
+  - Name: Desktop
+    Value: 2810688
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -55,14 +75,17 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -5139104759095031684}
   - {fileID: -6844368341126516476}
+  - {fileID: -710422742077217258}
+  - {fileID: 6194381263734984895}
   EditorEvents:
   - {fileID: 5493957696190138966}
+  - {fileID: 8884362524988514017}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6844368341126516476}
   StringsBanks:
   - {fileID: -5139104759095031684}
-  cacheTime: 638035879315873812
+  cacheTime: 638036027284661371
   cacheVersion: 131593
 --- !u!114 &5493957696190138966
 MonoBehaviour:
@@ -83,7 +106,7 @@ MonoBehaviour:
     Data3: -39830384
     Data4: -1497778769
   Banks:
-  - {fileID: -6844368341126516476}
+  - {fileID: 6194381263734984895}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -91,3 +114,75 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1805
+--- !u!114 &6194381263734984895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sfx.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD Studio/20221027/Build/Desktop/Sfx.bank
+  Name: Sfx
+  StudioPath: bank:/Sfx
+  lastModified: 638036027284430539
+  FileSizes:
+  - Name: Desktop
+    Value: 23488
+  Exists: 1
+--- !u!114 &8723281935117687489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Change
+  m_EditorClassIdentifier: 
+  Name: Change
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3971074317
+    data2: 330300408
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8884362524988514017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM
+  m_EditorClassIdentifier: 
+  Path: event:/BGM
+  Guid:
+    Data1: 182338105
+    Data2: 1124595384
+    Data3: 1793775766
+    Data4: -1242320551
+  Banks:
+  - {fileID: -710422742077217258}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8723281935117687489}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 208261

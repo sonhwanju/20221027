@@ -8,7 +8,7 @@ public class OnClickSoundButton : Button
 {
     public override void OnPointerClick(PointerEventData eventData)
     {
-        SoundManager.Instance.PlayBtnSfx();
+        SoundManager.PlayOneShot("event:/ButtonClick");
         base.OnPointerClick(eventData);
     }
 }
