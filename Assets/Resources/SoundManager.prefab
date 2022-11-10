@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178d85db702ca2a47aff3878fd494eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgmVca: vca:/BGM
+  sfxVca: vca:/Sfx
   bgmEvent: event:/BGM

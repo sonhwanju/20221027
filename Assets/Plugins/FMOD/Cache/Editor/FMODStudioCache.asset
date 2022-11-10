@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/20221027/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638036102044171619
+  lastModified: 638036767062852775
   FileSizes:
   - Name: Desktop
     Value: 1706
@@ -35,10 +35,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/20221027/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638036102044181625
+  lastModified: 638036767062872677
   FileSizes:
   - Name: Desktop
-    Value: 1130
+    Value: 1178
   Exists: 1
 --- !u!114 &-710422742077217258
 MonoBehaviour:
@@ -55,10 +55,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/20221027/Build/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638036102044141695
+  lastModified: 638036767062832789
   FileSizes:
   - Name: Desktop
-    Value: 2810688
+    Value: 2810912
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -85,7 +85,7 @@ MonoBehaviour:
   - {fileID: -6844368341126516476}
   StringsBanks:
   - {fileID: -5139104759095031684}
-  cacheTime: 638036102044362336
+  cacheTime: 638036767063053166
   cacheVersion: 131593
 --- !u!114 &5493957696190138966
 MonoBehaviour:
@@ -129,10 +129,34 @@ MonoBehaviour:
   Path: ../../FMOD Studio/20221027/Build/Desktop/Sfx.bank
   Name: Sfx
   StudioPath: bank:/Sfx
-  lastModified: 638036102044362336
+  lastModified: 638036767063053166
   FileSizes:
   - Name: Desktop
     Value: 23488
+  Exists: 1
+--- !u!114 &7709980377677157494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/IsLoop
+  m_EditorClassIdentifier: 
+  Name: IsLoop
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2842982673
+    data2: 2237457484
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &8723281935117687489
 MonoBehaviour:
@@ -183,6 +207,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 8723281935117687489}
+  - {fileID: 7709980377677157494}
   MinDistance: 1
   MaxDistance: 20
-  Length: 208261
+  Length: 232226
