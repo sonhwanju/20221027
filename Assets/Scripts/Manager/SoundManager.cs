@@ -82,6 +82,11 @@ public class SoundManager : MonoBehaviour
         StartSound(bgmInstance);
     }
 
+    public void SetBgmLoop(bool isLoop)
+    {
+        bgmInstance.setParameterByName("IsLoop", isLoop ? 1f : 0f);
+    }
+
     private void CreateBgmInstance()
     {
         bgmInstance = RuntimeManager.CreateInstance(bgmEvent);
